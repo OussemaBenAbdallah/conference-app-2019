@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg"  width="56" height="56" viewBox="0 0 56 56">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #6f55d9;
+        stroke: #6f55d9;
+        opacity: 0.19;
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-3 {
+        stroke: none;
+      }
+
+      .cls-4 {
+        fill: none;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#7c7cdb"/>
+      <stop offset="1" stop-color="#5842b8"/>
+    </linearGradient>
+  </defs>
+  <g id="avatar" transform="translate(-227 -224)">
+    <g id="Ellipse_3" class="cls-1" transform="translate(227 224)">
+      <circle class="cls-3" cx="28" cy="28" r="28"/>
+      <circle class="cls-4" cx="28" cy="28" r="27.5"/>
+    </g>
+    <g id="Group_7" transform="translate(-340)">
+      <path id="Rectangle_24" class="cls-2" d="M10,0h6A10,10,0,0,1,26,10v2a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V10A10,10,0,0,1,10,0Z" transform="translate(582 252)"/>
+      <circle id="Ellipse_2" class="cls-2" cx="7" cy="7" r="7" transform="translate(602 254) rotate(-180)"/>
+    </g>
+  </g>
+</svg>

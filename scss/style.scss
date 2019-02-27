@@ -1,0 +1,148 @@
+/* Colors */
+
+$primaryColor: #5842B8;
+$secondaryColor: #7C7CDB;
+$primaryLightText: #fff;
+$primaryDarkText: $primaryColor;
+$accent: #F5F6F7;
+$special: #726CD1;
+
+/* text style */
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+@mixin title($color) {
+  font-family: "Open Sans", sans-serif;
+  color: $color;
+  font-size: 28px;
+  text-align: center;
+}
+
+@mixin normalText($color) {
+  font-family: "Open Sans", sans-serif;
+  color: $color;
+  font-size: 20px;
+}
+
+@mixin subTitle($color) {
+  font-family: "Open Sans", sans-serif;
+  color: $color;
+  font-size: 14px;
+}
+
+@mixin special($color) {
+  font-family: "Open Sans", sans-serif;
+  color: $color;
+  font-style: italic;
+  font-size: 18px;
+}
+
+/*box style*/
+
+@mixin boxShadow($x,$y,$blur,$opacity) {
+  box-shadow: $x $y $blur rgba(0, 0, 0, $opacity);
+}
+
+@mixin boxStyle($h, $w, $r) {
+  height: $h;
+  width: $w ;
+  border-radius: $r ;
+  border-style: none;
+}
+
+@mixin linearGradient($c1, $c2) {
+  background-image: linear-gradient($c1, $c2);
+}
+
+@mixin primaryGradient {
+  @include linearGradient($secondaryColor, $primaryColor);
+}
+
+
+.title {
+  @include title(#000);
+}
+
+.sub-title {
+  @include subTitle($special);
+}
+
+.add-btn:active {
+  @include boxShadow(3px,3px,6px,0.4);
+  img{
+    background-color: $primaryColor;
+  }
+}
+
+
+nav.navbar {
+  @include boxShadow(0,3px,1px,0.2);
+  padding: 0;
+  margin:0 -20px !important;
+
+
+  a {
+    font-size: 28px;
+    font-weight: 600;
+    margin: 10px;
+  }
+
+  li.active {
+    @include primaryGradient;
+
+    a {
+      color: $primaryLightText !important;
+    }
+
+  }
+}
+
+div.container-fluid {
+  @include boxShadow(0,3px,6px,0.35);
+}
+
+form {
+
+  input,textarea {
+    border-style: none;
+    border-radius: 14px !important;
+    @include boxShadow(0, 3px, 6px, 0.2);
+  }
+
+  input:hover, textarea:hover {
+    @include boxShadow(0, 3px, 6px, 0.5);
+  }
+
+  label{
+      @include special(black);
+  }
+
+
+  .my-btn {
+    @include boxShadow(0, 3px, 6px, 0.2);
+    @include primaryGradient;
+    @include boxStyle(50px, 380px, 14px);
+    @include title($primaryLightText);
+    outline: none !important;
+  }
+
+  .my-btn:hover {
+    @include boxShadow(0, 4px, 5px, 0.5);
+    text-shadow: 0 0 5px white;
+  }
+
+  .my-btn:active {
+    background: $primaryColor;
+
+  }
+}
+
+
+footer {
+  a{
+    @include special($special);
+
+  }
+
+  @include normalText(black);
+}
