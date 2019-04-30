@@ -14,7 +14,7 @@
 #### Developing android app for conferences follow-up
 
 
-<img style="float: left;" src="images/threed_mockup.png">
+<img style="float: left;margin-left:-100px" src="images/threed_mockup.png">
 
 
 
